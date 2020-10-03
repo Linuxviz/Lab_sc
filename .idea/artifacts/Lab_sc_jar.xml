@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Lab_sc:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Lab_sc_jar</output-path>
+    <root id="archive" name="Lab_sc.jar">
+      <element id="module-output" name="Lab_sc" />
+      <element id="extracted-dir" path="$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.13.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.13.3-sources.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
