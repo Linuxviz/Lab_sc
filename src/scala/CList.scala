@@ -47,12 +47,7 @@ class CList {
   }
 
   def print_all(): Unit = {
-    var temp: Int = 0
-    for (i <- iter) {
-      print("\t[" + temp + "] ")
-      println(i.get_key())
-      temp = temp + 1
-    }
+    print(get_all())
   }
 
   def get_all(): String = {
@@ -177,7 +172,7 @@ class CList {
     }
   }
 
-  def save_in_file(path: String): Unit = {
+  def save_in_file(path: String = ""): Unit = {
     val filePath = path + "Clist.txt"
     val writer = new PrintWriter(new File(filePath))
     for (i <- iter) {
@@ -186,7 +181,7 @@ class CList {
     writer.close()
   }
 
-  def load_from_file(path: String): Unit = {
+  def load_from_file(path: String = "Clist.txt"): Unit = {
     var fSource = Source.fromFile(path)
     val mass: Array[String] = fSource
       .getLines()

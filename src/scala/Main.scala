@@ -1,25 +1,13 @@
 package scala
 
-//import scala.swing._
-//
-//class UI extends MainFrame {
-//  title = "GUI Program #1"
-//  preferredSize = new Dimension(320, 240)
-//  contents = new Label("Here is the contents!")
-//}
-//
-//object GuiProgramOne {
-//  def main(args: Array[String]) {
-//    val ui = new UI
-//    ui.visible = true
-//    println("End of main function")
-//  }
-//}
+import javax.swing.WindowConstants
+import java.awt.{Dimension, GridLayout}
 
 object Main {
 
   def main(args: Array[String]) = {
-    test()
+//    test()
+    GUI()
   }
 
   def generate_key(): String = {
@@ -28,10 +16,21 @@ object Main {
     r.toString
   }
 
+  // Графический интерфейс
+  def GUI(): Unit = {
+    val ui: MainWindow = new MainWindow("Список, реализованный с помощью ЯП Scala");
+    ui.setPreferredSize(new Dimension(1350, 500));
+    ui.setLayout(new GridLayout(1,2));
+    ui.setVisible(true);
+    ui.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    ui.pack();
+    ui.setLocationRelativeTo(null);
+  }
+
   //Это нужно скомпилить для первой лабы
   def test(): Unit = {
     val test: CList = new CList()
-    println("Создаем список из 10 элементов:")
+    println("Создаем список из 5 элементов:")
     test.create(5)
     test.print_all()
     println("Вывод элемента на который указывает итератор:")
