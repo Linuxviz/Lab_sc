@@ -12,8 +12,15 @@ object Main {
 
   def generate_key(): String = {
     val x = scala.util.Random
-    val r: Int = x.nextInt(15)
-    r.toString
+    val str = "qwertyuiop0123456789"
+    val randStr = new StringBuilder
+    val keyNumber = 7
+    for (j <- 0 until keyNumber) {
+      val number = x.nextInt(str.length)
+      val ch = str.charAt(number)
+      randStr.append(ch)
+    }
+    randStr.toString
   }
 
   // Графический интерфейс
