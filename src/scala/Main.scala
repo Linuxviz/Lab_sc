@@ -3,10 +3,11 @@ package scala
 import java.io.{File, PrintWriter}
 
 import scala.io.Source
+import scala.io.StdIn.readLine
 
 object Main {
 
-  def main(args: Array[String]) = {
+  def main(args: Array[String]): Unit = {
     test()
   }
 
@@ -280,7 +281,6 @@ object Main {
     }
   }
 
-  //Это нужно скомпилить для первой лабы
   def test(): Unit = {
     val test: CList = new CList()
     println("Создаем список из 10 элементов:")
@@ -299,6 +299,7 @@ object Main {
     k = test.change_element_by_index(3, "3")
     k = test.change_element_by_index(4, "4")
     test.print_all()
+    System.out.println("Длинна списка:")
     println("Длинна списка:")
     println(test.len())
 
